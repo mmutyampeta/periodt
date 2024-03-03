@@ -35,24 +35,31 @@ struct ContentView: View {
                 // Render content if Face ID is approved
                 renderContent()
             } else {
-                // Button to initiate authentication
-                Button(action: {
-                    authenticateWithFaceID()
-                }) {
-                    Text("Log In or Authenticate")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
+                Text("Please wait while we authenticate your identity...")
+                    .padding()
+                    .onAppear {
+                        authenticateWithFaceID()
+                    }
                 
-                // Display authentication message
+                
+                // Button to initiate authentication
+//                Button(action: {
+//                    authenticateWithFaceID()
+//                }) {
+//                    Text("Log In")
+//                        .padding()
+//                        .background(Color.blue)
+//                        .foregroundColor(.white)
+//                        .cornerRadius(10)
+//                }
+//                .padding()
+//
+                //Display authentication message
                 Text(authenticationMessage)
                     .foregroundColor(.red)
                     .padding()
             }
-        }
+        }.navigationTitle("Welcome to Periodt!")
     }
 
     func authenticateWithFaceID() {
@@ -159,7 +166,6 @@ struct ContentView: View {
                 }
             }
             Spacer()
-
         }
     }
 }
