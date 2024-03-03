@@ -89,6 +89,36 @@ struct ContentView: View {
         let date = Date()
         
         return VStack {
+            Spacer()
+                .frame(height: 10)
+            GeometryReader { geometry in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: VerticalAlignment.bottom, spacing: 10) {
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:100)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        Capsule()
+                            .frame(width:60, height:80)
+                        
+                    }
+                    .frame(width: geometry.size.width)
+                }
+            }.frame(height: 0)
+            Spacer()
+
             Triangle()
                 .frame(width: 30, height: 20)
                 .offset(y: 12.5)
@@ -128,6 +158,8 @@ struct ContentView: View {
                         .font(.system(size: 50, weight: .bold))
                 }
             }
+            Spacer()
+
         }
     }
 }
