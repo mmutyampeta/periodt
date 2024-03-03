@@ -14,6 +14,7 @@
 		04BF806B2B946739004778A8 /* periodtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF806A2B946739004778A8 /* periodtTests.swift */; };
 		04BF80752B946739004778A8 /* periodtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF80742B946739004778A8 /* periodtUITests.swift */; };
 		04BF80772B946739004778A8 /* periodtUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF80762B946739004778A8 /* periodtUITestsLaunchTests.swift */; };
+		04BF80862B947420004778A8 /* OneFingerRotation in Frameworks */ = {isa = PBXBuildFile; productRef = 04BF80852B947420004778A8 /* OneFingerRotation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		04BF80702B946739004778A8 /* periodtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = periodtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF80742B946739004778A8 /* periodtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periodtUITests.swift; sourceTree = "<group>"; };
 		04BF80762B946739004778A8 /* periodtUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periodtUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04BF80832B9469B8004778A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BF80862B947420004778A8 /* OneFingerRotation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		04BF80582B946737004778A8 /* periodt */ = {
 			isa = PBXGroup;
 			children = (
+				04BF80832B9469B8004778A8 /* Info.plist */,
 				04BF80592B946737004778A8 /* periodtApp.swift */,
 				04BF805B2B946737004778A8 /* ContentView.swift */,
 				04BF805D2B946739004778A8 /* Assets.xcassets */,
@@ -143,6 +147,9 @@
 			dependencies = (
 			);
 			name = periodt;
+			packageProductDependencies = (
+				04BF80852B947420004778A8 /* OneFingerRotation */,
+			);
 			productName = periodt;
 			productReference = 04BF80562B946737004778A8 /* periodt.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 04BF804D2B946737004778A8;
+			packageReferences = (
+				04BF80842B947420004778A8 /* XCRemoteSwiftPackageReference "OneFingerRotation" */,
+			);
 			productRefGroup = 04BF80572B946737004778A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +429,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"periodt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = periodt/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to unlock the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +460,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"periodt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = periodt/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to unlock the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04BF80842B947420004778A8 /* XCRemoteSwiftPackageReference "OneFingerRotation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:matteofontana-app/OneFingerRotation.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04BF80852B947420004778A8 /* OneFingerRotation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04BF80842B947420004778A8 /* XCRemoteSwiftPackageReference "OneFingerRotation" */;
+			productName = OneFingerRotation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04BF804E2B946737004778A8 /* Project object */;
 }
