@@ -35,6 +35,12 @@ struct ContentView: View {
                 // Render content if Face ID is approved
                 renderContent()
             } else {
+                Image("AppIcon")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .padding()
+                
                 Text("Please wait while we authenticate your identity...")
                     .padding()
                     .onAppear {
@@ -80,7 +86,7 @@ struct ContentView: View {
                         if let error = authenticationError {
                             self.authenticationMessage = "Authentication Failed: \(error.localizedDescription)"
                         } else {
-                            self.authenticationMessage = "Authentication Failed"
+                            self.authenticationMessage = "Authentication Failed\n"
                         }
                     }
                 }
