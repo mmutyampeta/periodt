@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
+@available(iOS 17, *)
 @main
 struct periodtApp: App {
+//    let container: ModelContainer = {
+//        let schema = Schema([userData.self])
+//        let container = try! ModelContainer(for: schema, configurations: [])
+//        return container
+//    } ()
+//    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: userData.self)
     }
 }
